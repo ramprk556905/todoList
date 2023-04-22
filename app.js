@@ -152,7 +152,7 @@ app.post("/work", function(req, res) {
 app.get("/about", function(req, res) {
   res.render("about");
 });
-const Port = process.env.PORT || 3000
-app.listen(Port, function() {
+//const Port = process.env.PORT || 3000
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server is running in port 3000");
 });
