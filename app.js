@@ -10,7 +10,7 @@ var items =["Eat","Sleep"];
 var workItems = [];
 */
 
-mongoose.connect("mongodb+srv://ramprk97:Rmkmr0418@cluster0.x5ouqrj.mongodb.net/toDoListDB", {
+const DB= mongoose.connect("mongodb+srv://ramprk97:Rmkmr0418@cluster0.x5ouqrj.mongodb.net/toDoListDB", {
   useNewUrlParser: true
 });
 
