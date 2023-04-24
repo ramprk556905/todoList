@@ -2,7 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 //const date = require(__dirname + "/date.js");
-const _ = require("lodash")
+const _ = require("lodash");
+require("dotenv").config();
 
 const app = express();
 /*
@@ -10,11 +11,8 @@ var items =["Eat","Sleep"];
 var workItems = [];
 */
 
-const DB= mongoose.connect("mongodb+srv://ramprk97:Rmkmr0418@cluster0.x5ouqrj.mongodb.net/toDoListDB", {
-  useNewUrlParser: true
-});
-
-//const connectToDatabase = require('./db');
+mongoose.connect(process.env.MONGO_DB_URL);
+//mongoose.connect("mongodb+srv://ramprk97:Rmkmr0418@cluster0.x5ouqrj.mongodb.net/toDoListDB", {useNewUrlParser: true})
 
 const itemSchema = {
   name: String
